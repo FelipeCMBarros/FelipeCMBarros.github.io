@@ -1,0 +1,27 @@
+body{
+    background-color: lightskyblue;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif; 
+    color: black;
+}
+
+h1{
+    font-size: 50px;
+    margin-top: 20px;
+}
+h2{
+    font-size: 30px;
+    margin-top: 20px;
+}
+form{
+    margin-top: 20px;
+    font-size: 20px;
+    color: black;
+    text-decoration: black;
+    a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+}
+
