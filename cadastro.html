@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CADASTRO</title>
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/cadastro.css">
+    <script src="js/cadastro.js" defer></script>
 </head>
 <body>
     <h1>Cadastramento</h1>
@@ -13,20 +14,22 @@
         Nome:<br>
         <input type="text" name="nome"><br><br>
 
-        CPF:<br>
-        <input type="text" name="cpf"><br><br>
+        <p id="cpf-error" class="error" role="alert" aria-live="polite"></p>
+        <label>CPF:</label><br>
+        <input type="text" id="cpf" name="cpf" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" aria-describedby="cpf-help cpf-error" maxlength="14" required><br><br>
 
-        RG:<br>
-        <input type="text" name="RG"><br><br>
+        <p id="rg-error" class="error" role="alert" aria-live="polite"></p>
+        <label for="rg">RG</label><br>
+        <input type="text" id="rg"name="rg"inputmode="numeric"autocomplete="off"placeholder="00.000.000-0"aria-describedby="rg-help rg-error"maxlength="12"required/><br><br>
         
         Data de Nascimento:<br>
         <input type="text" name="data_nascimento"><br><br>
 
-        Sexo:<br>
-        <input type="radio" name="sexo" value="homem"><img src="../img/homem.png" alt="Menu" width="40" height="40">Homem<br>
-        <input type="radio" name="sexo" value="mulher"><img src="../img/mulher.png" alt="Menu" width="40" height="40">Mulher<br><br>
+        Genero:<br>
+        <input type="radio" name="Genero" value="homem"><img src="../img/homem.png" alt="Menu" width="40" height="40">Homem<br>
+        <input type="radio" name="Genero" value="mulher"><img src="../img/mulher.png" alt="Menu" width="40" height="40">Mulher<br><br>
 
-        RA (preencher somente se for Homem):<br>
+        RA (Registro de Reservista):<br>
         <input type="text" name="ra"><br><br>
 
         <a href="dados.html">CADASTRAR</a>

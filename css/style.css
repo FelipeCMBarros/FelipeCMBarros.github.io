@@ -26,6 +26,9 @@ input{
     margin: 10px;
     padding: 5px;
 }
+.error{
+  color: red;
+}
 a {
     display: inline-block;
     text-decoration: none;
