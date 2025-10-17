@@ -23,4 +23,18 @@ a {
     border: 2px solid black;
     border-radius: 10px;
     background-color: rgb(185, 192, 161);
+    transition: background-color 0.3s, t 0.2s;
 }
+a img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.05);
+}
+
+br {
+    line-height: 1.8;
+}
+
