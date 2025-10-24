@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function(){})
+
 function aplicarMascaraCPF(valor) {
   const digitos = valor.replace(/\D/g, '').slice(0, 11);
   const partes = [];

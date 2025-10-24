@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function(){})
+
 // Máscara CPF: 000.000.000-00
 function aplicarMascaraCPF(valor) {
   const digitos = valor.replace(/\D/g, '').slice(0, 11);
