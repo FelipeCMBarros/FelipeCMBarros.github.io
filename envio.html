@@ -3,14 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENVIADO</title>
+    <title>Enviar Notificação</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/envio.css">
 </head>
 <body>
-    <h1>NOTIFICAÇÃO ENVIADA COM SUCESSO!</h1>
+    <main>
+        <h1>Enviar Notificação</h1>
 
-    <a href="notificacao.html"><img src="../img/Voltar.png" alt="Menu" width="40" height="40">Voltar para Setores</a>
-    
+        <form action="#" method="post" class="form-notificacao">
+            <label for="nome">Nome do Funcionário:</label><br></br>
+            <input 
+                type="text" 
+                id="nome" 
+                name="nome" 
+                placeholder="Digite o nome do funcionário" 
+                required
+            ><br></br>
+
+            <label for="cpf">CPF:</label><br></br>
+            <input 
+                type="text" 
+                id="cpf" 
+                name="cpf" 
+                placeholder="Digite o CPF" 
+                maxlength="14" 
+                required
+            ><br></br>
+
+            <label for="mensagem">Mensagem:</label><br></br>
+            <textarea 
+                id="mensagem" 
+                name="mensagem" 
+                rows="5" 
+                placeholder="Digite sua mensagem..." 
+                required
+            ></textarea><br></br>
+
+            <button type="submit">Enviar Notificação</button>
+        </form>
+
+        <a href="notificacao.html" class="botao">
+            <img 
+                src="../img/Voltar.png" 
+                alt="Voltar para o menu de setores" 
+                width="40" 
+                height="40"
+            >
+            Voltar para Setores
+        </a><br></br>
+    </main>
 </body>
 </html>
