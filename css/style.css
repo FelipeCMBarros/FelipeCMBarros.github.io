@@ -29,7 +29,7 @@ input{
 .error{
   color: red;
 }
-a {
+button {
     display: inline-block;
     text-decoration: none;
     color: black;
@@ -41,12 +41,12 @@ a {
     background-color: rgb(185, 192, 161);
 }
 
-a img {
+button img {
     vertical-align: middle;
     margin-right: 10px;
 }
 
-a:hover {
+button:hover {
     background-color: rgba(255, 255, 255, 0.9);
     transform: scale(1.05);
 }
