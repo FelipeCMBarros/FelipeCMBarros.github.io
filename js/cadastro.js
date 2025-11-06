@@ -90,3 +90,4 @@ const rgPattern  = /^\d{2}\.\d{3}\.\d{3}-\d{1}$/;
     msgEl.textContent = '';
   }
 })();
+
