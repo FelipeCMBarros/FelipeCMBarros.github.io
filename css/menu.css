@@ -10,33 +10,48 @@ body {
 h1 {
     font-size: 50px;
     margin-top: 40px;
-    margin-bottom:100px;
+    margin-bottom: 100px;
 }
 
+
 a.botao {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;                 
+    justify-content: flex-start;         
+    gap: 15px;                           
     text-decoration: none;
     color: black;
     width: 250px;             
-    height: 40px;   
+    height: 70px;   
     font-size: 25px;
     margin: 15px 0;
-    padding: 15px 15px;
     border: 2px solid black;
     border-radius: 10px;
     background-color: rgb(185, 192, 161);
-    transition: background-color 0.3s, t 0.2s;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+    padding-left: 20px;
 }
-a img {
-    vertical-align: middle;
-    margin-right: 10px;
-}
-a:hover {
+
+a.botao:hover {
     background-color: rgba(255, 255, 255, 0.9);
     transform: scale(1.05);
 }
 
+/* IMAGEM DENTRO DO BOTÃO */
+.botaoi img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+/* TEXTO DO BOTÃO */
+.botaot {
+    flex: 1;
+    text-align: left;                    /* texto alinhado à esquerda */
+}
+
+/* AJUSTE PARA ESPAÇAMENTO ENTRE BOTÕES */
 br {
     line-height: 1.8;
 }
-

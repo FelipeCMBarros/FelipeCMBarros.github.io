@@ -24,7 +24,6 @@ function aplicarMascaraRG(valor) {
   return formatado;
 }
 
-// Padrões (somente estrutura)
 const cpfPattern = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
 const rgPattern  = /^\d{2}\.\d{3}\.\d{3}-\d{1}$/;
 
@@ -49,15 +48,55 @@ const rgPattern  = /^\d{2}\.\d{3}\.\d{3}-\d{1}$/;
   });
   inputRG.addEventListener('blur', () => validarEstrutura(inputRG, errorRG, rgPattern, 'Formato de RG inválido. Use 00.000.000-0.'));
 
+  // === RA x Gênero ===
+  const inputRA   = document.getElementById('ra');
+  const labelRA   = document.getElementById('ra-label');
+  const radioHomem  = document.getElementById('homem');
+  const radioMulher = document.getElementById('mulher');
+
+  function toggleRA() {
+    if (radioMulher.checked) {
+      // Esconde campo e label
+      inputRA.style.display = 'none';
+      labelRA.style.display = 'none';
+      inputRA.removeAttribute('required');
+      inputRA.value = '';
+    } else if (radioHomem.checked) {
+      // Mostra campo e label
+      inputRA.style.display = 'inline';
+      labelRA.style.display = 'inline';
+      inputRA.setAttribute('required', 'required');
+    } else {
+      // Estado inicial
+      inputRA.style.display = 'inline';
+      labelRA.style.display = 'inline';
+      inputRA.removeAttribute('required');
+    }
+  }
+
+  // Listeners
+  radioHomem.addEventListener('change', toggleRA);
+  radioMulher.addEventListener('change', toggleRA);
+
+  // Estado inicial
+  toggleRA();
+
   // Validação geral no envio
   form.addEventListener('submit', (e) => {
     const cpfOK = validarEstrutura(inputCPF, errorCPF, cpfPattern, 'Formato de CPF inválido. Use 000.000.000-00.');
     const rgOK  = validarEstrutura(inputRG, errorRG, rgPattern,  'Formato de RG inválido. Use 00.000.000-0.');
-    if (!cpfOK || !rgOK) {
+    toggleRA();
+
+    // Verifica RA se homem
+    let raOK = true;
+    if (radioHomem.checked && inputRA.value.trim() === '') {
+      raOK = false;
+      alert('Preencha o RA (Reservista) para o gênero Homem.');
+    }
+
+    if (!cpfOK || !rgOK || !raOK) {
       e.preventDefault();
       alert('Verifique os campos com erro antes de enviar.');
-    } else {
-      alert('Dados enviados com sucesso!');
     }
   });
 
@@ -90,4 +129,3 @@ const rgPattern  = /^\d{2}\.\d{3}\.\d{3}-\d{1}$/;
     msgEl.textContent = '';
   }
 })();
-
