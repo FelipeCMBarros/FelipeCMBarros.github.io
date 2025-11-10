@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DADOS</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DADOS</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dados.css">
 </head>
 <body>
-     <h1>Dados do Cadastro</h1>
+  <h1>Dados do Cadastro</h1>
 
-    <p><b>Nome:</b> Nome do cadastrado</p>
-    <p><b>CPF:</b> CPF do cadastrado</p>
-    <p><b>Data de Nascimento:</b> data de nascimento do cadastrado</p>
-    <p><b>RG:</b> RG do Cadastrado</p>
-    <p><b>Sexo:</b> Sexo do cadastrado</p>
-    <p><b>RA:</b> Número da reservista</p>
+  <main>
+    <p><b>Nome:</b> <span id="out-nome">—</span></p>
+    <p><b>CPF:</b> <span id="out-cpf">—</span></p>
+    <p><b>Data de Nascimento:</b> <span id="out-data">—</span></p>
+    <p><b>RG:</b> <span id="out-rg">—</span></p>
+    <p><b>Sexo:</b> <span id="out-genero">—</span></p>
+    <p id="campo-ra"><b>RA:</b> <span id="out-ra">—</span></p>
+
+    <br><br>
+
+    <!-- Primeiro: Cadastro e Scan, lado a lado -->
+    <a href="cadastro.html">
+      <img src="../img/Voltar.png" alt="Cadastro" width="40" height="40">
+      Voltar para Cadastro
+    </a>
+
+    <a href="autoscan.html">
+      <img src="../img/Voltar.png" alt="Scan" width="40" height="40">
+      Voltar para Scan
+    </a>
+
+    <a href="menu.html" class="botaoV">
+      <img src="../img/Voltar.png" alt="Menu" width="40" height="40">
+      Voltar para Menu
+    </a>
+  </main>
 
 
-    <br>
-    <a href="cadastro.html"><img src="../img/Voltar.png" alt="Menu" width="40" height="40">Voltar para Cadastro</a><br><br>
-    <a href="autoscan.html"><img src="../img/Voltar.png" alt="Menu" width="40" height="40">Voltar para Scan</a>
-
+  <script src="js/dados.js" defer></script>
 </body>
 </html>
