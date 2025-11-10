@@ -13,7 +13,6 @@ h1 {
     margin-bottom: 100px;
 }
 
-
 a.botao {
     display: inline-flex;
     align-items: center;                 
@@ -54,4 +53,22 @@ a.botao:hover {
 /* AJUSTE PARA ESPAÇAMENTO ENTRE BOTÕES */
 br {
     line-height: 1.8;
+}
+
+
+/* BOTÃO VOLTAR */
+a.botao .botaoV {
+    color: rgb(0, 0, 0);              /* cor do texto */
+}
+
+/* COR DE FUNDO DIFERENTE PARA O BOTÃO VOLTAR */
+a.botao:last-of-type {
+    background-color: rgb(214, 225, 176); 
+    border-color: black;
+    margin-top: 50px;
+}
+
+a.botao:last-of-type:hover {
+    background-color: rgb(255, 255, 255);  /* vermelho mais claro ao passar o mouse */
+    transform: scale(1.05);
 }

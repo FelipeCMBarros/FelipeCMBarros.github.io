@@ -11,7 +11,7 @@ h1{
 }
 
 form{
-    margin-top: 30px;
+    margin-top: 40px;
     font-size: 25px;
     color: black;
     text-decoration: black;
@@ -71,4 +71,51 @@ a:hover {
 
 br {
     line-height: 1.8;
+}
+
+.genero-item {
+    display: inline-flex;
+    align-items: center;    /* alinha radio, imagem e texto na mesma linha */
+    gap: 8px;               /* espaço entre botão, imagem e texto */
+    font-size: 22px;
+    cursor: pointer;
+    margin-bottom: 10px;    /* espaço entre as opções (Homem e Mulher) */
+}
+
+.genero-item input[type="radio"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.genero-item img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+/* BOTÃO VOLTAR */
+a.botaoV {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0); 
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(214, 225, 176);
+    padding: 15px 25px;
+    margin-top: 50px; /* empurra o botão mais para baixo */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+a.botaoV img {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+a.botaoV:hover {
+    background-color: rgb(255, 255, 255); 
+    transform: scale(1.05);
 }
